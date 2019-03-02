@@ -61,6 +61,10 @@ class SnacksController < ApplicationController
     end
   end
 
+  # the endpoint
+  def pdf_metadata
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_snack
