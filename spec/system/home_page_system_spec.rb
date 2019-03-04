@@ -1,13 +1,12 @@
 require "web_helper"
 
 RSpec.describe "the home page", type: :system do
-  it "loads OK" do
+  it "should have a form pointed at the endpoint that returns JSON" do
     visit root_path
-    expect(page.body).not_to be_empty
-  end
-
-  it "should have a form" do
-    visit root_path
-    expect(page.has_selector?('form'))
+    within("form[action='/pdf_metadata']") do
+      page.fill_in 'urls[]', with: 'http://example.com'
+      click_button 'Feed Me'
+    end
+    expect(page.body).to include('{')
   end
 end

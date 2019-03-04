@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <%= form_tag '/pdf_metadata', method: :get do -%>
-  <%= text_field_tag :urls %>
+  <input type="url" name="urls[]" id="urls[]">
   <%= submit_tag 'Feed Me' %>
 <% end -%>
