@@ -1,1 +1,1 @@
-json.results @results
+json.raptor_snacks(@results)

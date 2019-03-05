@@ -25,6 +25,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # PDF libraries
 gem 'docraptor'
 gem 'pdf-reader'
+# Cloud storage
+gem "aws-sdk-s3", require: false
+gem 'mini_magick', '~> 4.9', '>= 4.9.3'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
