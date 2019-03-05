@@ -42,6 +42,7 @@ group :development do
 end
 
 group :test do
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
   gem 'cucumber-rails', '~> 1.6', require: false
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
