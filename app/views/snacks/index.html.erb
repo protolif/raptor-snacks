@@ -1,6 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+<pre data-source="http://ascii.co.uk/art/dinosaur">
+                                                  .--.__
+                                                .~ (@)  ~~~---_
+                                               {     `-_~,,,,,,)
+                                               {    (_  ',
+                                                ~    . = _',
+                                                 ~-   '.  =-'
+                                                   ~     :
+.                                             _,.-~     ('');
+'.                                         .-~        \  \ ;
+  ':-_                                _.--~            \  \;      _-=,.
+    ~-:-.__                       _.-~                 {  '---- _'-=,.
+       ~-._~--._             __.-~                     ~---------=,.`
+           ~~-._~~-----~~~~~~       .+++~~~~~~~~-__   /
+                ~-.,____           {   -     +   }  _/
+                        ~~-.______{_    _ -=\ / /_.~
+                             :      ~--~    // /         ..-
+                             :   / /      // /         ((
+                             :  / /      {   `-------,. ))
+                             :   /        ''=--------. }o
+                .=._________,'  )                     ))
+                )  _________ -''                     ~~
+               / /  _ _
+              (_.-.'O'-'.
+</pre>
+
+
 <%= form_tag '/pdf_metadata', method: :get do -%>
-  <input type="url" name="urls[]" id="urls[]">
+  <input type="url" name="urls[]" id="urls[]" placeholder="Enter one or more urls separated by commas. http://g.cn,http://c.cc,http://e.tc" size="60">
   <%= submit_tag 'Feed Me' %>
 <% end -%>

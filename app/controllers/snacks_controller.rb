@@ -1,6 +1,5 @@
 class SnacksController < ApplicationController
   # GET /snacks
-  # GET /snacks.json
   def index
   end
 

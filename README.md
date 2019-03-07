@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Raptor Snacks is a web service that converts websites into PDF files (using Docraptor API) and returns useful metadata in JSON format.
 
-Things you may want to cover:
+Details:
 
-* Ruby version
+* Ruby version: ruby 2.6.1p33
 
-* System dependencies
+* System dependencies: readline, openssl, gcc, imagemagick, node.js, PostgreSQL
 
-* Configuration
+* Configuration: Amazon credentials in environment variables: AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY
 
-* Database creation
+* Database creation: bundle exec rake db:create
 
-* Database initialization
+* Database initialization: bundle exec rake db:migrate
 
-* How to run the test suite
+* How to run the test suite: bundle exec rspec spec
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment instructions: git push heroku master

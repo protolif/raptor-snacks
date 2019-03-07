@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :snacks, only: [:index]
+  resources :snacks, only: [:index], defaults: { format: :html }
   get '/pdf_metadata', to: 'snacks#pdf_metadata', as: 'endpoint', defaults: { format: :json }
   root 'snacks#index'
 # Built-in Active Storage routes:
