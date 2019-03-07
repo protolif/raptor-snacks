@@ -56,6 +56,8 @@ class SnacksController < ApplicationController
     end.group_by do |document|
       document[:page_count]
     end
+    # display results in json format
+    render json: @results.to_json
   end
 
   private
