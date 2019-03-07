@@ -17,4 +17,12 @@ RSpec.describe "the endpoint", type: :system do
     expect(page.body).to include('http://c.cc')
     expect(page.body).to include('http://e.tc')
   end
+
+  it "matches the given example" do
+    # From EB_Coding_Challenge.pdf
+    visit '/pdf_metadata?urls[]=http://docraptor.com/examples/invoice.html'
+    # The JSON string with extraneous whitespaces removed
+    # with one exception, the Prince version is newer than the documentation. OK
+    expect(page.body).to include(`{"1":[{"url":"http://docraptor.com/examples/invoice.html","pdf_version":1.5,"info":{"Producer":"Prince 12.4 (www.princexml.com)","Title":"Your New Project for Our Best Client"},"metadata":null,"page_count":1}]}`)
+  end
 end
